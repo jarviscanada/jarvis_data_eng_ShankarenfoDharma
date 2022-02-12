@@ -16,12 +16,13 @@ CREATE TABLE IF NOT EXISTS PUBLIC.host_info (
 
 --create table host_usage
 CREATE TABLE IF NOT EXISTS PUBLIC.host_usage (
-     "timestamp"      TIMESTAMP NOT NULL,
-     id               SERIAL NOT NULL PRIMARY KEY,
-     hostname         VARCHAR NOT NULL UNIQUE,
-     memory_free      REAL NOT NULL,
-     cpu_idle         REAL NOT NULL CHECK (cpu_idle <= 100),
-     cpu_kernel       REAL NOT NULL CHECK (cpu_kernel <= 100),
-     disk_io          INTEGER NOT NULL,
-     disk_available   REAL NOT NULL
+     "timestamp"      TIMESTAMP,
+          host_id          SERIAL,
+          memory_free      REAL NOT NULL,
+          cpu_idle         REAL NOT NULL CHECK (cpu_idle <= 100),
+          cpu_kernel       REAL NOT NULL CHECK (cpu_kernel <= 100),
+          disk_io          INTEGER NOT NULL,
+          disk_available   REAL NOT NULL,
+          PRIMARY KEY ("timestamp", host_id),
+          FOREIGN KEY (host_id) REFERENCES host_info(id)
 );
