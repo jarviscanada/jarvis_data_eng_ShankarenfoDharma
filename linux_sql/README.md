@@ -80,6 +80,7 @@ psql -h localhost -p 5432 -d host_agent -U postgres -f sql/queries.sql
 ## Database Modeling
 Describe the schema of each table using markdown table syntax (do not put any sql code)
 - `host_info`
+
 | Column  | Datatype | Explanation |
 | --- | --- | --- |
 | id | serial | primary key auto-incrementing id of hosts |
@@ -92,6 +93,7 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 | total_mem | real | Total memory capacity in mb |
 | timestamp | timestamp | time record is made |
 - `host_usage`
+
 | Column  | Datatype | Explanation |
 | --- | --- | --- |
 | timestamp | timestamp | time record is made |
