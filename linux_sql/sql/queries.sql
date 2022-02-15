@@ -15,7 +15,7 @@ END;
 $$
 LANGUAGE PLPGSQL;
 
-SELECT host_id , hostname, intrvl5min(host_usage.timestamp) AS "R_timestamp" , to_char( AVG((total_mem-memory_free)/total_mem * 100), 'FM99') AS "used_mem_%"
+SELECT host_id , hostname, intrvl5min(host_usage.timestamp) AS "R_timestamp" , to_char( AVG(((total_mem/1000)-memory_free)/(total_mem/1000) * 100), 'FM99') AS "used_mem_%"
 FROM host_usage, host_info
 WHERE host_id = id
 GROUP BY host_id, hostname, "R_timestamp"
