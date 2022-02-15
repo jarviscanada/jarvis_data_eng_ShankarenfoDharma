@@ -92,12 +92,12 @@ Describe the schema of each table using markdown table syntax (do not put any sq
 | L2_cache | real | Capacity of L2 Cache in mb |
 | total_mem | real | Total memory capacity in mb |
 | timestamp | timestamp | time record is made |
-- `host_usage`
+- `host_usage`: Compound primary key in timestamp & host_id
 
 | Column  | Datatype | Explanation |
 | --- | --- | --- |
-| timestamp | timestamp | time record is made |
-| host_id | serial | Foreign key of which host is being recorded |
+| timestamp | timestamp | time record is made | PK
+| host_id | serial | Foreign key of which host is being recorded | PK
 | memory_free | real | Mb of memory that is free |
 | cpu_idle | real | Percentage of cpu that is idle |
 | cpu_kernel | real | Percentage of cpu that is working as kernel |
