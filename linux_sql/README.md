@@ -46,7 +46,7 @@ Finally, sql commands in queries.sql can be used to display useful data regardin
 3. By intervals of 5 min, display host-time intervals that do not have 3+ records (record operation error occurred)
 
 ## Architecture
-Draw a cluster diagram with three Linux hosts, a DB, and agents (use draw.io website). Image must be saved to the `assets` directory. 
+![image](https://user-images.githubusercontent.com/59852656/153981097-20e3369d-b8a8-495e-a232-13095fbf1cb8.png)
 
 ## Scripts
 Shell script description and usage (use markdown code block for script usage)
