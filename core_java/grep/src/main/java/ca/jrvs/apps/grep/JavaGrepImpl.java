@@ -5,7 +5,6 @@ import com.sun.org.slf4j.internal.LoggerFactory;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class JavaGrepImpl implements JavaGrep {
@@ -88,6 +87,10 @@ public class JavaGrepImpl implements JavaGrep {
 
     @Override
     public void writeToFile(List<String> lines) throws IOException {
+        //create file if not exists
+        File out = new File(outFile);
+        out.createNewFile();
+
         FileWriter fWriter = new FileWriter(outFile);
         BufferedWriter bWriter = new BufferedWriter(fWriter);
         //write to file
