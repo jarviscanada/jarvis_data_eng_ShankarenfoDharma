@@ -1,6 +1,5 @@
-package ca.jrvs.apps.grep;
+package ca.jrvs.apps.practice;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Consumer;
