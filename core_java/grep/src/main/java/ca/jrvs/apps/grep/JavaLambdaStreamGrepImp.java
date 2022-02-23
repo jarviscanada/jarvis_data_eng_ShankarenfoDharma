@@ -7,10 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class JavaLambdaStreamGrepImpl extends JavaGrepImpl{
+public class JavaLambdaStreamGrepImp extends JavaGrepImp {
     public static void main(String[] args) {
         if(args.length <= 3){
-            JavaLambdaStreamGrepImpl jLSGI = new JavaLambdaStreamGrepImpl();
+            JavaLambdaStreamGrepImp jLSGI = new JavaLambdaStreamGrepImp();
             jLSGI.setRegEx(args[0]);
             jLSGI.setOutFile(args[2]);
             jLSGI.setRootPath(args[1]);

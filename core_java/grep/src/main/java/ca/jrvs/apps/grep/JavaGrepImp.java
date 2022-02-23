@@ -7,9 +7,9 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class JavaGrepImpl implements JavaGrep {
+public class JavaGrepImp implements JavaGrep {
 
-    final Logger lggr = LoggerFactory.getLogger(JavaGrepImpl.class);
+    final Logger lggr = LoggerFactory.getLogger(JavaGrepImp.class);
 
     private String regex;   //target pattern to find
     private String rootPath;//parent file directory
@@ -22,7 +22,7 @@ public class JavaGrepImpl implements JavaGrep {
 
         //use default logger config
         //BasicConfigurator.configure();
-        JavaGrepImpl jGrepImpl = new JavaGrepImpl();
+        JavaGrepImp jGrepImpl = new JavaGrepImp();
         //get user variables
         jGrepImpl.setRegEx(args[0]);
         jGrepImpl.setRootPath(args[1]);
