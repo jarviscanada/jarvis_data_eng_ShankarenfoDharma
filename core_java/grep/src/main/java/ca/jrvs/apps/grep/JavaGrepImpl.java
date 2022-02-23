@@ -1,7 +1,7 @@
 package ca.jrvs.apps.grep;
 
-import com.sun.org.slf4j.internal.Logger;
-import com.sun.org.slf4j.internal.LoggerFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.*;
 import java.util.ArrayList;
@@ -9,7 +9,7 @@ import java.util.List;
 
 public class JavaGrepImpl implements JavaGrep {
 
-    final Logger lggr = LoggerFactory.getLogger(JavaGrep.class);
+    final Logger lggr = LoggerFactory.getLogger(JavaGrepImpl.class);
 
     private String regex;   //target pattern to find
     private String rootPath;//parent file directory
@@ -31,7 +31,7 @@ public class JavaGrepImpl implements JavaGrep {
         try{    //do the actual work process
             jGrepImpl.process();
         }catch(Exception ex){
-            jGrepImpl.lggr.error("Error: Unable to process",ex);
+//            jGrepImpl.lggr.error("Error: Unable to process",ex);
         }
     }
 
@@ -72,7 +72,7 @@ public class JavaGrepImpl implements JavaGrep {
             bReader.close();
             fReader.close();
         } catch(IOException ex) {
-            lggr.error("Error file reading",ex);
+//            lggr.error("Error file reading",ex);
         }
         return lineRead;
     }
