@@ -8,10 +8,10 @@ import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
-public class LambdaStreamExcImpl implements LambdaStreamExc{
+public class LambdaStreamExcImp implements LambdaStreamExc{
 
     public static void main(String[] args) {
-        LambdaStreamExcImpl lSEI = new LambdaStreamExcImpl();
+        LambdaStreamExcImp lSEI = new LambdaStreamExcImp();
         lSEI.printOdd(lSEI.createIntStream(0, 20), lSEI.getLambdaPrinter("odd:", "!"));
     }
 
