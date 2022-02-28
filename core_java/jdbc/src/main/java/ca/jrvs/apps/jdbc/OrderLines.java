@@ -55,4 +55,17 @@ public class OrderLines {
     public void setProductPrice(double productPrice) {
         this.productPrice = productPrice;
     }
+
+    @Override
+    public String toString() {
+        return "OrderLine{" +
+                "quantity=" + quantity +
+                ", productCode='" + productCode + '\'' +
+                ", productName='" + productName + '\'' +
+                ", productSize=" + produceSize +
+                ", productVariety='" + productVariety + '\'' +
+                ", productPrice=" + productPrice +
+                '}';
+    }
+
 }

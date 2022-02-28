@@ -5,6 +5,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDAO extends DataAccessObject<Order> {
@@ -16,6 +17,8 @@ public class OrderDAO extends DataAccessObject<Order> {
             "JOIN order_item ol ON ol.order_id=o.order_id " +
             "JOIN product p ON ol.product_id = p.product_id " +
             "WHERE o.order_id = ?;";
+    private static final String GET_FOR_CUST = "SELECT * FROM get_orders_by_customer(?)";
+
     public OrderDAO(Connection connection) {
         super(connection);
     }
@@ -85,4 +88,47 @@ public class OrderDAO extends DataAccessObject<Order> {
     public void delete(long id) {
 
     }
+
+    public List<Order> getOrdersForCustomer(long customerId){
+        List<Order> orders = new ArrayList<>();
+        try(PreparedStatement statement = this.connection.prepareStatement(GET_FOR_CUST);){
+            statement.setLong(1, customerId);
+            ResultSet resultSet = statement.executeQuery();
+            long orderId = 0;
+            Order order = null;
+            while(resultSet.next()){
+                long localOrderId = resultSet.getLong(4);
+                if(orderId!=localOrderId){
+                    order = new Order();
+                    orders.add(order);
+                    order.setId(localOrderId);
+                    orderId = localOrderId;
+                    order.setCustomerFirstName(resultSet.getString(1));
+                    order.setCustomerLastName(resultSet.getString(2));
+                    order.setCustomerEmail(resultSet.getString(3));
+                    order.setCreationDate(new Date(resultSet.getDate(5).getTime()).toString());
+                    order.setTotalDue(resultSet.getDouble(6));
+                    order.setStatus(resultSet.getString(7));
+                    order.setSalesPersonFirstName(resultSet.getString(8));
+                    order.setSalesPersonLastName(resultSet.getString(9));
+                    order.setSalesPersonEmail(resultSet.getString(10));
+                    List<OrderLines> orderLines = new ArrayList<>();
+                    order.setOrderLines(orderLines);
+                }
+                OrderLines orderLine = new OrderLines();
+                orderLine.setQuantity(resultSet.getInt(11));
+                orderLine.setProductCode(resultSet.getString(12));
+                orderLine.setProductName(resultSet.getString(13));
+                orderLine.setProduceSize(resultSet.getInt(14));
+                orderLine.setProductVariety(resultSet.getString(15));
+                orderLine.setProductPrice(resultSet.getDouble(16));
+                order.addOrderLine(orderLine);
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+            throw new RuntimeException(e);
+        }
+        return orders;
+    }
+
 }
