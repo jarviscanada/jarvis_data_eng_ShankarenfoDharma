@@ -104,7 +104,31 @@ public class Order implements DataTransferObject {
         this.orderLines.add(od);
     }
 
+    public void setOrderLines(List<OrderLines> od){
+        for (OrderLines ordrlns:od){
+            this.orderLines.add(ordrlns);
+        }
+    }
+
     public List<OrderLines> getOrderLines(){
         return orderLines;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", customerFirstName='" + customerFirstName + '\'' +
+                ", customerLastLane='" + customerLastName + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", creationDate=" + creationDate +
+                ", totalDue=" + totalDue +
+                ", status='" + status + '\'' +
+                ", salespersonFirstName='" + salesPersonFirstName + '\'' +
+                ", salespersonLastName='" + salesPersonLastName + '\'' +
+                ", salespersonEmail='" + salesPersonEmail + '\'' +
+                ", orderLines=" + orderLines +
+                '}';
+    }
+
 }

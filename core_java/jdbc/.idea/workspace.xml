@@ -5,17 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="124a3599-778e-4af6-98e3-926c6d128851" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/DatabaseConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderLines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/util/DataAccessObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/util/DataTransferObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sql/stored_proc.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/CustomerDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/CustomerDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderLines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/Customer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/Customer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/CustomerDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/CustomerDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/JDBCExecutor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/JDBCExecutor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/Order.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/Order.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/OrderDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/OrderDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/OrderLines.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/jdbc/OrderLines.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,10 +62,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql" />
       <recent name="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc" />
       <recent name="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/util" />
     </key>
@@ -97,16 +101,5 @@
       <updated>1645917136973</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
