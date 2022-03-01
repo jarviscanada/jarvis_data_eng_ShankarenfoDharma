@@ -4,7 +4,7 @@ This application is a practice/example/exercise of JDBC techniques, using PSQL a
 # Implementation
 Database is generated with given sql scripts.
 ## ER Diagram
-
+![ER Diagram](assets/JDBCDB.png)
 
 ## Design Patterns
 The JDBC connection design utilizes DAO and DTO interfaces greatly, alongside a driver.\n
