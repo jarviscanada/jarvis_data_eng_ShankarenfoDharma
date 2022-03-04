@@ -47,10 +47,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/sql" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/sql" />
       <recent name="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc" />
       <recent name="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/util" />
     </key>
@@ -85,16 +86,5 @@
       <updated>1645917136973</updated>
     </task>
     <servers />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
