@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="124a3599-778e-4af6-98e3-926c6d128851" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/CustomerDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/DatabaseConnectionManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderItems.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/OrderLines.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/util/DataAccessObject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/util/DataTransferObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java" afterDir="false" />
-    </list>
+    <list default="true" id="124a3599-778e-4af6-98e3-926c6d128851" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -103,7 +91,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/ca/jrvs/apps/jdbc/JDBCExecutor.java</url>
-          <line>34</line>
+          <line>33</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
