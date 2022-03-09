@@ -1,0 +1,91 @@
+{
+  "education": [
+    {
+      "awards_achievements": [
+        "Dean's List (2019)",
+        "GPA: 3.49/4"
+      ],
+      "degree": "Post-Baccalaureate of Computer Information Systems (Emerging Tech)",
+      "department": "Computing Studies \u0026 Information Systems",
+      "duration": "2019-2022",
+      "school_name": "Douglas College"
+    },
+    {
+      "awards_achievements": [
+        "Second Class, Division One/Upper Second Class"
+      ],
+      "degree": "Bachelors in Computer Science",
+      "department": "Electrical and Computer Engineering",
+      "duration": "2014-2017",
+      "school_name": "Nottingham Malaysia"
+    }
+  ],
+  "github_repo_root_url": "https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma",
+  "highlighted_projects": [
+    {
+      "description": "Created a web application NotePack, for usage by students in an online environment to promote note-taking, studying, organization and communication. Deployed using Flask-Python, with SQL database implementation. Each user has access to individual repository for quick upload/downloads, in-app notepad, chat system and a book recommendation system. Login can also be achieved using facecam capture.",
+      "git_url": "https://github.com/ShankarenfoPannagianiDharma/NotePack",
+      "name": "NotePack WebApp"
+    },
+    {
+      "description": "Built an Android game application for a student's debate game. Using MongoDB, Java and Python, a group of students may enter a debate game where they support or contest a controversial statement. Throughout the game, players (arbitrated by the teacher) try to convince the opposition of their side through arguments on releveant subtopics.",
+      "git_url": "https://github.com/ShankarenfoPannagianiDharma/CSIS4280-TugOfLogic-Group4",
+      "name": "Tug-of-logic"
+    },
+    {
+      "description": "Built an Android app for personal use. The budget app allows user to record expenditures (entered manually), which are recorded and summed by monthly intervals. Records are saved into local files of the App, and can be deleted by user's volition.",
+      "git_url": "https://github.com/ShankarenfoPannagianiDharma/WotIsMyBudget",
+      "name": "WotIsMyBudget"
+    }
+  ],
+  "jarvis_projects": [
+    {
+      "description": "Deployed PSQL on JRD VM, accessible with VNC remote access. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.",
+      "git_url": "/linux_sql",
+      "name": "Cluster Monitor"
+    }
+  ],
+  "name": "Shankarenfo Pannagiani Dharma",
+  "others": [
+    {
+      "bullets": [
+        "PC Gaming",
+        "Violin Player",
+        "Creative Writing/Reading"
+      ],
+      "title": "Activities/Hobbies"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Jarvis",
+      "description": "I apologize in advance but this part is vexing me. As a fresh graduate I have no professional experience, so I am uncertain what I should put here. I am undergoing training but that does not count towards professional experience, yet this part of the profile is required. Thus, this is a placeholder as I need to fill this space, as I cannot skip this part in any way. Thank you for understanding.",
+      "duration": "2022-present",
+      "title": "Software Developer"
+    }
+  ],
+  "skills": {
+    "competent": [
+      "Linux/Bash",
+      "C++/C#",
+      "Javascript",
+      "HTML/CSS",
+      "Flask"
+    ],
+    "familiar": [
+      "Python",
+      "GCP",
+      "JSON",
+      "Data Structures \u0026 Algorithms",
+      "Machine Learning"
+    ],
+    "proficient": [
+      "Java",
+      "Android Programming",
+      "RDBMS/SQL",
+      "Agile/Scrum",
+      "Git"
+    ]
+  },
+  "summary": "I am a recent graduate from Douglas College, and am undergoing further training in Jarvis as a software development engineer, to be matched with a Jarvis client. The software development world is ever-changing, constantly improving and iterating over itself, improving and growing towards more impressive feats. I love being in that current of self-improvement, learning new techniques, skills and methods as technology advances. I enjoy puzzling out software logic of the real world- how systems would have to behave, what alternatives there should be, and how it is all implemented."
+}
