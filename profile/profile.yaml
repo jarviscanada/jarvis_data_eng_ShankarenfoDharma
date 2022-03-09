@@ -39,12 +39,12 @@ jarvis_projects:
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
     description: Deployed PSQL on JRD VM, accessible with VNC remote access. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.
-#  - name: "Core Java Apps"
-#    git_url: "/core_java"
-#    description:
+  - name: "Core Java Apps"
+    git_url: "/core_java"
+    description:
 #      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-#      - "JDBC App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
-#      - "Grep App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "JDBC App: Created a java application that demonstrates usage of JDBC, including the use of JDBC driver, connections, DAOs and DTOs. DAO operations include queries for SQL with grouping, conditionals and multiple joins."
+      - "Grep App: Deployed a java application emulating 'grep' functionality of bash. Application uses buffered reader/writer and stream API to process files. Application differs from bash grep as it accepts a folder url as source, which will access all files located under that folder for matching, and forces an output file for result of operation. Application can be accessed in target/grep-1.0-SNAPSHOT.jar through javac."
 #  - name: "Springboot App"
 #    git_url: "/springboot"
 #    description: ""
