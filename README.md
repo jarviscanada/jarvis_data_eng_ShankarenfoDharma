@@ -17,6 +17,11 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Shankarenf
 
 **Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma/tree/master/linux_sql)]: Deployed PSQL on JRD VM, accessible with VNC remote access. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.
 
+**Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma/tree/master/core_java)]:
+      
+  - JDBC App: Created a java application that demonstrates usage of JDBC, including the use of JDBC driver, connections, DAOs and DTOs. DAO operations include queries for SQL with grouping, conditionals and multiple joins.
+  - Grep App: Deployed a java application emulating 'grep' functionality of bash. Application uses buffered reader/writer and stream API to process files. Application differs from bash grep as it accepts a folder url as source, which will access all files located under that folder for matching, and forces an output file for result of operation. Application can be accessed in target/grep-1.0-SNAPSHOT.jar through javac.
+
 
 ## Highlighted Projects
 **NotePack WebApp** [[GitHub](https://github.com/ShankarenfoPannagianiDharma/NotePack)]: Created a web application NotePack, for usage by students in an online environment to promote note-taking, studying, organization and communication. Deployed using Flask-Python, with SQL database implementation. Each user has access to individual repository for quick upload/downloads, in-app notepad, chat system and a book recommendation system. Login can also be achieved using facecam capture.
