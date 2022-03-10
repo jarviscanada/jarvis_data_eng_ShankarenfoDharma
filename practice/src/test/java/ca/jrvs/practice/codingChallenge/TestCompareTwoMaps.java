@@ -35,20 +35,20 @@ public class TestCompareTwoMaps {
         assertFalse(cTM.compareMapsEquals(m1,m4));
     }
 
-//    @Test
-//    public void compareTwoHashJMaps(){
-//        HashJMap<Integer,String> m1 = new HashJMap<>();
-//        m1.put(1,"C");
-//        HashJMap<Integer,String> m2 = new HashJMap<>();
-//        m2.put(1,"C");
-//        HashJMap<Integer,String> m3 = new HashJMap<>();
-//        m3.put(1,"B");
-//        HashJMap<Integer,String> m4 = new HashJMap<>();
-//        m4.put(1,"c");
-//
-//        CompareTwoMaps cTM = new CompareTwoMaps();
-//        assertTrue(cTM.compareMapsHashJMapEquals(m1,m2));
-//        assertFalse(cTM.compareMapsHashJMapEquals(m1,m3));
-//        assertFalse(cTM.compareMapsHashJMapEquals(m1,m4));
-//    }
+    @Test
+    public void compareTwoHashJMaps(){
+        HashJMap<Integer,String> m1 = new HashJMap<>();
+        m1.put(1,"C");
+        HashJMap<Integer,String> m2 = new HashJMap<>();
+        m2.put(1,"C");
+        HashJMap<Integer,String> m3 = new HashJMap<>();
+        m3.put(1,"B");
+        HashJMap<Integer,String> m4 = new HashJMap<>();
+        m4.put(1,"c");
+
+        CompareTwoMaps cTM = new CompareTwoMaps();
+        assertTrue(cTM.compareMapsHashJMapEquals(m1,m2));
+        assertFalse(cTM.compareMapsHashJMapEquals(m1,m3));
+        assertFalse(cTM.compareMapsHashJMapEquals(m1,m4));
+    }
 }
