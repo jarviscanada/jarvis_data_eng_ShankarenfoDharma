@@ -17,7 +17,7 @@ public class TestMiddleLinkedList {
             System.out.print(middleNode.val);
             middleNode = middleNode.next;
         }
-        
+
         headNode = new MiddleLinkedList.ListNode(1);
         headNode.next = new MiddleLinkedList.ListNode(2);
         headNode.next.next = new MiddleLinkedList.ListNode(3);
