@@ -1,5 +1,12 @@
 package ca.jrvs.apps.twitter.example.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
+
+import java.io.IOException;
+
 public class JSONParsingJackson {
     //JSON string is provided(you can copy and paste)
     public static final String companyStr = "{\n"
@@ -46,7 +53,23 @@ public class JSONParsingJackson {
             + "      }\n"
             + "   ]\n"
             + "}";
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+       Company company = toObjectFromJSON(companyStr, Company.class);
+       System.out.println(toJSON(company,true,false));
+    }
 
+    public static String toJSON(Object object, boolean prettyJSON,boolean includeNullValues) throws
+            JsonProcessingException{
+        ObjectMapper objectMapper = new ObjectMapper();
+        if(!includeNullValues)
+            objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+        if(prettyJSON)
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+        return objectMapper.writeValueAsString(object);
+    }
+
+    public static <T>T toObjectFromJSON(String JSON, Class DTO) throws IOException{
+        ObjectMapper mapper = new ObjectMapper();
+        return (T) mapper.readValue(JSON, DTO);
     }
 }

@@ -15,10 +15,10 @@ import java.util.Arrays;
 
 public class TwitterAPITest {
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(TwitterAPITest.class);
-    private static String CONSUMER_KEY = "ZxNkrMv6NaEH9OQDEZnQVkxbh";
-    private static String CONSUMER_SECRET = "pYyO1e7NJLdajKqdgwZSQEiotYVZpjkf2hwFO700wGaC2DefVE";
-    private static String ACCESS_KEY = "1498715648758714372-niob4NBQdBmfx8FLwV6CwMoLDkRjCi";
-    private static String ACCESS_SECRET = "zpSjTwlKI59onKHia5RleHiIzerJkEjO5r6awIedYiEgv";
+    private static String CONSUMER_KEY = System.getenv("CONSUMERKEY");
+    private static String CONSUMER_SECRET = System.getenv("CONSUMERSECRET");
+    private static String ACCESS_KEY = System.getenv("ACCESSKEY");
+    private static String ACCESS_SECRET = System.getenv("ACCESSSECRET");
 
     public static void main(String[] args) throws Exception{
         //OAuth Setup
@@ -26,7 +26,7 @@ public class TwitterAPITest {
         consumer.setTokenWithSecret(ACCESS_KEY,ACCESS_SECRET);
 
         //http get request
-        String status = "today is gud day";
+        String status = "working day";
         PercentEscaper percentEscaper = new PercentEscaper("",false);
         HttpPost request = new HttpPost("https://api.twitter.com/1.1/statuses/update.json?status="+percentEscaper.escape(status));
 
