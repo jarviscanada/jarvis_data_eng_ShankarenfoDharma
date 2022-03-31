@@ -5,7 +5,7 @@ github_repo_root_url: https://github.com/jarviscanada/jarvis_data_eng_Shankarenf
 
 # Introduce yourself, your academic and professional background.
 # What excites you about the software industry and your passion. At least 80 words
-summary: I am a recent graduate from Douglas College, and am undergoing further training in Jarvis as a software development engineer, to be matched with a Jarvis client. The software development world is ever-changing, constantly improving and iterating over itself, improving and growing towards more impressive feats. I love being in that current of self-improvement, learning new techniques, skills and methods as technology advances. I enjoy puzzling out software logic of the real world- how systems would have to behave, what alternatives there should be, and how it is all implemented.
+summary: I am a recent graduate from Douglas College, and am undergoing further training in Jarvis as a software development engineer, learning advanced techniques in Java such as Stream API, JDBC, dockers and containers and JSON APIs. I have also become familiar with Android development, aslongside Python Flask coding through my school studies. The software development world is ever-changing, constantly improving and iterating over itself, improving and growing towards more impressive feats. I love being in that current of self-improvement, learning new techniques, skills and methods as technology advances. I enjoy puzzling out software logic of the real world- how systems would have to behave, what alternatives there should be, and how it is all implemented.
 
 # Group your skills by level.
 # Your skills can be anything software related (e.g. language, frameworks, methodologies, software, etc.).
@@ -29,7 +29,7 @@ skills:
     - Python
     - GCP
     - JSON
-    - Data Structures & Algorithms
+    - R Data Mining
     - Machine Learning
 
 # List of Jarvis projects
@@ -38,7 +38,7 @@ jarvis_projects:
     git_url: "/linux_sql"
     # The project description allows hiring managers to understand your project and technologies you used(e.g. programming languages, libraries, algorithms, hardware, tools, etc.).
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: Deployed PSQL on JRD VM, accessible with VNC remote access. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.
+    description: Deployed a script-based monitoring tool. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
@@ -86,7 +86,7 @@ professional_experience:
     company: "Jarvis"
     duration: "2022-present"
     # The project description must start with an action verb (https://bit.ly/3guO98u)
-    description: "I apologize in advance but this part is vexing me. As a fresh graduate I have no professional experience, so I am uncertain what I should put here. I am undergoing training but that does not count towards professional experience, yet this part of the profile is required. Thus, this is a placeholder as I need to fill this space, as I cannot skip this part in any way. Thank you for understanding."
+    description: "Collaborated in an Agile Scrum environment for various Jarvis applications and projects. Projects involve usage of Dockers and containers, as well as Maven, IntelliJ, PSQL and various APIs. Scrum development methodology requires daily scrum meetings with team members, as well as 2-week sprint ending with a retrospective to coordinate and measure progress."
 #  - title: "Tutor"
 #    company: "XYZ Company"
 #    duration: "2019"

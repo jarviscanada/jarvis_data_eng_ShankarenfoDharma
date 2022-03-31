@@ -1,6 +1,6 @@
 # Shankarenfo Pannagiani Dharma . Jarvis Consulting
 
-I am a recent graduate from Douglas College, and am undergoing further training in Jarvis as a software development engineer, to be matched with a Jarvis client. The software development world is ever-changing, constantly improving and iterating over itself, improving and growing towards more impressive feats. I love being in that current of self-improvement, learning new techniques, skills and methods as technology advances. I enjoy puzzling out software logic of the real world- how systems would have to behave, what alternatives there should be, and how it is all implemented.
+I am a recent graduate from Douglas College, and am undergoing further training in Jarvis as a software development engineer, learning advanced techniques in Java such as Stream API, JDBC, dockers and containers and JSON APIs. I have also become familiar with Android development, aslongside Python Flask coding through my school studies. The software development world is ever-changing, constantly improving and iterating over itself, improving and growing towards more impressive feats. I love being in that current of self-improvement, learning new techniques, skills and methods as technology advances. I enjoy puzzling out software logic of the real world- how systems would have to behave, what alternatives there should be, and how it is all implemented.
 
 ## Skills
 
@@ -8,14 +8,14 @@ I am a recent graduate from Douglas College, and am undergoing further training 
 
 **Competent:** Linux/Bash, C++/C#, Javascript, HTML/CSS, Flask
 
-**Familiar:** Python, GCP, JSON, Data Structures & Algorithms, Machine Learning
+**Familiar:** Python, GCP, JSON, R Data Mining, Machine Learning
 
 ## Jarvis Projects
 
 Project source code: [https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma](https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma)
 
 
-**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma/tree/master/linux_sql)]: Deployed PSQL on JRD VM, accessible with VNC remote access. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.
+**Cluster Monitor** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma/tree/master/linux_sql)]: Deployed a script-based monitoring tool. Project utilizes PSQL container for database access, which is used to log host device information and device performance (via memory). Using bash and sql scripts, Crontab enables automatic logging of JRD performance into the PSQL table, with SQL queries displaying useful information regarding performance and recorded logs.
 
 **Core Java Apps** [[GitHub](https://github.com/jarviscanada/jarvis_data_eng_ShankarenfoDharma/tree/master/core_java)]:
       
@@ -33,7 +33,7 @@ Project source code: [https://github.com/jarviscanada/jarvis_data_eng_Shankarenf
 
 ## Professional Experiences
 
-**Software Developer, Jarvis (2022-present)**: I apologize in advance but this part is vexing me. As a fresh graduate I have no professional experience, so I am uncertain what I should put here. I am undergoing training but that does not count towards professional experience, yet this part of the profile is required. Thus, this is a placeholder as I need to fill this space, as I cannot skip this part in any way. Thank you for understanding.
+**Software Developer, Jarvis (2022-present)**: Collaborated in an Agile Scrum environment for various Jarvis applications and projects. Projects involve usage of Dockers and containers, as well as Maven, IntelliJ, PSQL and various APIs. Scrum development methodology requires daily scrum meetings with team members, as well as 2-week sprint ending with a retrospective to coordinate and measure progress.
 
 
 ## Education
