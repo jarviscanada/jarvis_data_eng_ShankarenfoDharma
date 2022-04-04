@@ -2,6 +2,7 @@ package ca.jrvs.apps.twitter;
 
 import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.helper.HttpHelper;
+import ca.jrvs.apps.twitter.helper.TwitterHttpHelper;
 import ca.jrvs.apps.twitter.model.Coordinate;
 import ca.jrvs.apps.twitter.model.Entity;
 import ca.jrvs.apps.twitter.model.Tweet;
@@ -13,7 +14,6 @@ import org.junit.Test;
 import org.slf4j.Logger;
 
 import java.util.LinkedList;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -33,28 +33,10 @@ public class TwitterDaoIntTest {
     }
 
     @Test
-    public void create() throws Exception{
+    public void tests() throws Exception{
         Logger logger = org.slf4j.LoggerFactory.getLogger(TwitterHttpHelperTest.class);
-        //create tweet
-        String hshtag = "#abc";
-        String text = "@someone something "+hshtag+" "+System.currentTimeMillis();
-        double lat =1d;
-        double lon = -1d;
-        Tweet postTweet = new Tweet();
-        postTweet.setText(text);
-        Coordinate coordinate = new Coordinate();
-        Entity entity = new Entity();
-        LinkedList list = new LinkedList();
-        list.add(hshtag);
-        entity.setHashtags(list);
-        list = new LinkedList();
-        list.add("@someone");
-        entity.setUserMentions(list);
-        coordinate.setCoordinates(new double[] {lat,lon});
-        postTweet.setCoordinates(coordinate);
-        list = new LinkedList();
-        list.add(entity);
-        postTweet.setEntities(list);
+        String text = "@someone something #abc "+System.currentTimeMillis();
+        Tweet postTweet = TwitterUtils.CreateTweetObject(text, new double[] {1d,-1d});
         //display object as json
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);

@@ -1,6 +1,5 @@
-package ca.jrvs.apps.twitter;
+package ca.jrvs.apps.twitter.helper;
 
-import ca.jrvs.apps.twitter.helper.HttpHelper;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthException;

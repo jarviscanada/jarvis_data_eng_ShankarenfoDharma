@@ -33,25 +33,8 @@ public class TwitterRestDaoUnitTest {
     public void showTweet() throws Exception{
         Logger logger = org.slf4j.LoggerFactory.getLogger(TwitterHttpHelperTest.class);
         //create tweet
-        String hshtag = "#abc";
-        String text = "@someone something "+hshtag+" "+System.currentTimeMillis();
-        double lat =1d;
-        double lon = -1d;
-        Tweet postTweet = new Tweet();
-        postTweet.setText(text);
-        Coordinate coordinate = new Coordinate();
-        Entity entity = new Entity();
-        LinkedList list = new LinkedList();
-        list.add(hshtag);
-        entity.setHashtags(list);
-        list = new LinkedList();
-        list.add("@someone");
-        entity.setUserMentions(list);
-        coordinate.setCoordinates(new double[] {lat,lon});
-        postTweet.setCoordinates(coordinate);
-        list = new LinkedList();
-        list.add(entity);
-        postTweet.setEntities(list);
+        String text = "@someone something #abc "+System.currentTimeMillis();
+        Tweet postTweet = TwitterUtils.CreateTweetObject(text, new double[] {1d,-1d});
 
         //intentional fail
         when(mockHelper.httpPost(isNotNull())).thenThrow(new RuntimeException("mock"));

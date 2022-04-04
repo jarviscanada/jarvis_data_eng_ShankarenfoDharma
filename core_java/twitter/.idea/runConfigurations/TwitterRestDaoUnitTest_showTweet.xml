@@ -3,7 +3,7 @@
     <module name="java_apps" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="ca.jrvs.apps.twitter.*" />
+        <option name="PATTERN" value="ca.jrvs.apps.twitter.helper.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>

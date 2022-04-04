@@ -1,15 +1,15 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="TwitterDaoIntTest.create" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+  <configuration default="false" name="TwitterDaoIntTest.tests" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
     <module name="java_apps" />
     <extension name="coverage">
       <pattern>
-        <option name="PATTERN" value="ca.jrvs.apps.twitter.*" />
+        <option name="PATTERN" value="ca.jrvs.apps.twitter.helper.*" />
         <option name="ENABLED" value="true" />
       </pattern>
     </extension>
     <option name="PACKAGE_NAME" value="ca.jrvs.apps.twitter" />
     <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.twitter.TwitterDaoIntTest" />
-    <option name="METHOD_NAME" value="create" />
+    <option name="METHOD_NAME" value="tests" />
     <option name="TEST_OBJECT" value="method" />
     <envs>
       <env name="ACCESSKEY" value="1498715648758714372-niob4NBQdBmfx8FLwV6CwMoLDkRjCi" />

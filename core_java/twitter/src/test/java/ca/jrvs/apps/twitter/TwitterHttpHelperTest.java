@@ -1,5 +1,6 @@
 package ca.jrvs.apps.twitter;
 
+import ca.jrvs.apps.twitter.helper.TwitterHttpHelper;
 import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.junit.Test;
