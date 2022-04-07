@@ -32,7 +32,7 @@ public class TwitterCLIApp {
         String ACCESS_SECRET = System.getenv("ACCESSSECRET");
 
         //Java components
-        HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_KEY,ACCESS_KEY);
+        HttpHelper httpHelper = new TwitterHttpHelper(CONSUMER_KEY,CONSUMER_SECRET,ACCESS_KEY,ACCESS_SECRET);
         CrdDao crdDao = new TwitterDao(httpHelper);
         Service service = new TwitterService(crdDao);
         Controller controller = new TwitterController(service);
