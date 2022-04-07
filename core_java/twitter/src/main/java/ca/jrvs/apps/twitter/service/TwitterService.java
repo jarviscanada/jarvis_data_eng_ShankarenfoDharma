@@ -2,6 +2,7 @@ package ca.jrvs.apps.twitter.service;
 
 import ca.jrvs.apps.twitter.dao.CrdDao;
 import ca.jrvs.apps.twitter.dao.TwitterDao;
+import ca.jrvs.apps.twitter.model.Entity;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,10 +18,10 @@ public class TwitterService implements Service{
     @Override
     public Tweet postTweet(Tweet tweet) {
         //validate tweet: Text length, lat/lon range, id format
-        //Twitter id == 0 && id_str == null is new tweet (no ID, skip)
+        //Twitter id == null && id_str == null is new tweet (no ID, skip)
         if(tweet.getText().length() >= 140)
             throw new RuntimeException("Tweet status/text length exceeds 140.");
-        if( !(tweet.getId() == 0 && tweet.getId_str() == null) && !String.valueOf(tweet.getId()).equals(tweet.getId_str()) )
+        if( !(tweet.getId() == null && tweet.getId_str() == null) && !String.valueOf(tweet.getId()).equals(tweet.getId_str()) )
             throw new RuntimeException("Tweet id mismatch.");
         if( !((tweet.getCoordinates().getCoordinates()[0] >= -180 && tweet.getCoordinates().getCoordinates()[0] <= 180) && (tweet.getCoordinates().getCoordinates()[1] >= -90 && tweet.getCoordinates().getCoordinates()[1] <= 90)) )
             throw new RuntimeException("Incorrect coordinates in tweet");
@@ -36,14 +37,51 @@ public class TwitterService implements Service{
         }catch (NumberFormatException e) {
             throw new RuntimeException("ID not numeric/parseable.");
         }
-        //filter unwanted properties
         Tweet resultTweet = (Tweet) dao.findById(id);
-        //fields must match properties in model
-        for(String wantedField : fields){
-            if(eligibleFields.contains(wantedField.toLowerCase(Locale.ROOT).trim())){
-                resultTweet.setId(null);
-            }else{
-                throw new RuntimeException("Requested fields mismatch.");
+        if(fields != null) {
+            Tweet filteredTweet = new Tweet();
+            //filter unwanted properties
+            //fields must match properties in model
+            for (String wantedField : fields) {
+                if (eligibleFields.contains(wantedField.toLowerCase(Locale.ROOT).trim())) {
+                    switch(wantedField){
+                        case "created_at":
+                            filteredTweet.setCreated_at(resultTweet.getCreated_at());
+                            break;
+                        case "id":
+                            filteredTweet.setId(resultTweet.getId());
+                            break;
+                        case "id_str":
+                            filteredTweet.setId_str(resultTweet.getId_str());
+                            break;
+                        case "text":
+                            filteredTweet.setText(resultTweet.getText());
+                            break;
+                        case "entities":
+                            filteredTweet.setEntities((List<Entity>) resultTweet.getEntities());
+                            break;
+                        case "coordinates":
+                            filteredTweet.setCoordinates(resultTweet.getCoordinates());
+                            break;
+                        case "retweet_count":
+                            filteredTweet.setRetweet_count(resultTweet.getRetweet_count());
+                            break;
+                        case "favorite_count":
+                            filteredTweet.setFavorite_count(resultTweet.getFavorite_count());
+                            break;
+                        case "favorited":
+                            filteredTweet.setFavorited(resultTweet.isFavorited());
+                            break;
+                        case "retweeted":
+                            filteredTweet.setRetweeted(resultTweet.isRetweeted());
+                            break;
+                        default:
+
+                    }
+                } else {
+                    throw new RuntimeException("Requested fields mismatch.");
+                }
+                resultTweet = filteredTweet;
             }
         }
         return resultTweet;
