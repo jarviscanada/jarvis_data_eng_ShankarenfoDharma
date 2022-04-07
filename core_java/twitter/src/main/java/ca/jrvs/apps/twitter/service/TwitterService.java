@@ -5,11 +5,11 @@ import ca.jrvs.apps.twitter.dao.TwitterDao;
 import ca.jrvs.apps.twitter.model.Tweet;
 import org.springframework.beans.factory.annotation.Autowired;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class TwitterService implements Service{
     private CrdDao dao;
+    private HashSet<String> eligibleFields = new HashSet<>(Arrays.asList("created_at","id","id_str","text","entities","coordinates","retweet_count","favorite_count","favorited","retweeted"));
 
     @Autowired
     public TwitterService(CrdDao dao) {this.dao = dao;}
@@ -29,13 +29,24 @@ public class TwitterService implements Service{
 
     @Override
     public Tweet showTweet(String id, String[] fields) {
+
         //check id
         try{
             Long.parseLong(id);
         }catch (NumberFormatException e) {
             throw new RuntimeException("ID not numeric/parseable.");
         }
-        return (Tweet) dao.findById(id);
+        //filter unwanted properties
+        Tweet resultTweet = (Tweet) dao.findById(id);
+        //fields must match properties in model
+        for(String wantedField : fields){
+            if(eligibleFields.contains(wantedField.toLowerCase(Locale.ROOT).trim())){
+                resultTweet.setId(null);
+            }else{
+                throw new RuntimeException("Requested fields mismatch.");
+            }
+        }
+        return resultTweet;
     }
 
     @Override
