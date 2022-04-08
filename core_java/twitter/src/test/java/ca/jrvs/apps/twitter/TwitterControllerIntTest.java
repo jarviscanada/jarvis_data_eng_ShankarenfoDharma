@@ -36,7 +36,7 @@ public class TwitterControllerIntTest {
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
         objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
         //Correct methods- create, show, delete
-        Tweet response = controller.postTweet(new String[]{"post","A test of your reflexes!! @WOL #Endwalker","40:29"});
+        Tweet response = controller.postTweet(new String[]{"post","A test of your reflexes! @WOL #Endwalker","4:29"});
         assertNotNull(response);
         logger.debug(objectMapper.writeValueAsString(response));
         response = controller.showTweet(new String[]{"show", response.getId_str()});

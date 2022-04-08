@@ -1,7 +1,6 @@
 package ca.jrvs.apps.twitter;
 
 import com.google.gdata.util.common.base.PercentEscaper;
-import com.sun.org.slf4j.internal.LoggerFactory;
 import oauth.signpost.OAuthConsumer;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import org.apache.http.HttpResponse;

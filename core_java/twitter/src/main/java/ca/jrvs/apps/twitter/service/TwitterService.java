@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.*;
 
+@org.springframework.stereotype.Service
 public class TwitterService implements Service{
     private CrdDao dao;
     private HashSet<String> eligibleFields = new HashSet<>(Arrays.asList("created_at","id","id_str","text","entities","coordinates","retweet_count","favorite_count","favorited","retweeted"));
@@ -81,8 +82,8 @@ public class TwitterService implements Service{
                 } else {
                     throw new RuntimeException("Requested fields mismatch.");
                 }
-                resultTweet = filteredTweet;
             }
+            resultTweet = filteredTweet;
         }
         return resultTweet;
     }

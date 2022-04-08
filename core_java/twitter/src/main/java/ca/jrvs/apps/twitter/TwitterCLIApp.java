@@ -14,9 +14,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.Locale;
 
+@Component
 public class TwitterCLIApp {
     private String GENERIC_USAGE_LINE = "USAGE: TwitterCLIApp post|show|delete [options]";
     private Controller controller;
@@ -24,7 +26,7 @@ public class TwitterCLIApp {
     @Autowired
     public TwitterCLIApp(Controller controller){this.controller = controller;}
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         //env vars get
         String CONSUMER_KEY = System.getenv("CONSUMERKEY");
         String CONSUMER_SECRET = System.getenv("CONSUMERSECRET");

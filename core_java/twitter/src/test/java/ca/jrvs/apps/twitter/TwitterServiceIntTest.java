@@ -49,7 +49,7 @@ public class TwitterServiceIntTest {
             assertTrue(true);
         }
         //fix tweet text
-        testTweet = TwitterUtils.CreateTweetObject("@whosever @mercury @something afsassdfda hoyhoyhoyatoot #testing #iamsuffering", new double[] {1d,1d});
+        testTweet = TwitterUtils.CreateTweetObject("@whosever @mercury @something afsassdfdrwafasa textexttext #testing #iamsuffering", new double[] {1d,1d});
         //assert success
         Tweet replyTweet = service.postTweet(testTweet);
         logger.debug(objectMapper.writeValueAsString(replyTweet));
@@ -71,5 +71,10 @@ public class TwitterServiceIntTest {
         } catch (RuntimeException e) {
             assertTrue(true);
         }
+
+        //tweet show specific fields
+        Tweet showTweet = service.showTweet(replyTweet.getId_str(), new String[]{"id","text","coordinates"});
+        logger.debug(objectMapper.writeValueAsString(showTweet));
+        service.deleteTweets(new String[]{replyTweet.getId_str()});
     }
 }

@@ -36,7 +36,7 @@ public class TwitterDaoIntTest {
     public void tests() throws Exception{
         Logger logger = org.slf4j.LoggerFactory.getLogger(TwitterHttpHelperTest.class);
         String text = "@someone something #abc "+System.currentTimeMillis();
-        Tweet postTweet = TwitterUtils.CreateTweetObject(text, new double[] {1d,-1d});
+        Tweet postTweet = TwitterUtils.CreateTweetObject(text, new double[] {2d,-1d});
         //display object as json
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);

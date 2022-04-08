@@ -9,11 +9,13 @@ import org.apache.http.HttpResponse;
 import org.apache.http.util.EntityUtils;
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
 
+@Repository
 public class TwitterDao implements CrdDao<Tweet,String>{
     private static final Logger logger = org.slf4j.LoggerFactory.getLogger(TwitterDao.class);
     //URI parts

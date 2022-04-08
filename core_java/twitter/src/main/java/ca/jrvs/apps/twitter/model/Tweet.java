@@ -81,22 +81,22 @@ public class Tweet {
         this.text = text;
     }
 
-    @JsonProperty("Entities")
+    @JsonProperty("entities")
     public Collection<Entity> getEntities() {
         return entities;
     }
 
-    @JsonProperty("Entities")
+    @JsonProperty("entities")
     public void setEntities(List<Entity> entities) {
         this.entities = entities;
     }
 
-    @JsonProperty("Coordinates")
+    @JsonProperty("coordinates")
     public Coordinate getCoordinates() {
         return coordinates;
     }
 
-    @JsonProperty("Coordinates")
+    @JsonProperty("coordinates")
     public void setCoordinates(Coordinate coordinates) {
         this.coordinates = coordinates;
     }

@@ -12,10 +12,10 @@
     <option name="METHOD_NAME" value="tests" />
     <option name="TEST_OBJECT" value="method" />
     <envs>
-      <env name="ACCESSKEY" value="1498715648758714372-niob4NBQdBmfx8FLwV6CwMoLDkRjCi" />
-      <env name="ACCESSSECRET" value="zpSjTwlKI59onKHia5RleHiIzerJkEjO5r6awIedYiEgv" />
-      <env name="CONSUMERKEY" value="ZxNkrMv6NaEH9OQDEZnQVkxbh" />
-      <env name="CONSUMERSECRET" value="pYyO1e7NJLdajKqdgwZSQEiotYVZpjkf2hwFO700wGaC2DefVE" />
+      <env name="ACCESSKEY" value="2fZ8eUCt0zWQUcCEomHjJyqnB" />
+      <env name="ACCESSSECRET" value="VGdfUKM84DaF9aTAFzuge5JHvRCpz0F6FCL9yCoGVjtyuPASFG" />
+      <env name="CONSUMERKEY" value="1498715648758714372-x7Pu6EUWidAGj5TmEVaHk5G6ANzGAI" />
+      <env name="CONSUMERSECRET" value="w1pt4KaLKFbV8xp17oE1FS2XdREScgG7fvaSeRUhlqtpZ" />
     </envs>
     <method v="2">
       <option name="Make" enabled="true" />
