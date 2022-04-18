@@ -1,0 +1,24 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="TwitterControllerIntTest.test" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+    <module name="java_apps" />
+    <extension name="coverage">
+      <pattern>
+        <option name="PATTERN" value="ca.jrvs.apps.twitter.*" />
+        <option name="ENABLED" value="true" />
+      </pattern>
+    </extension>
+    <option name="PACKAGE_NAME" value="ca.jrvs.apps.twitter" />
+    <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.twitter.TwitterControllerIntTest" />
+    <option name="METHOD_NAME" value="test" />
+    <option name="TEST_OBJECT" value="method" />
+    <envs>
+      <env name="CONSUMERKEY" value="2fZ8eUCt0zWQUcCEomHjJyqnB" />
+      <env name="CONSUMERSECRET" value="VGdfUKM84DaF9aTAFzuge5JHvRCpz0F6FCL9yCoGVjtyuPASFG" />
+      <env name="ACCESSKEY" value="1498715648758714372-x7Pu6EUWidAGj5TmEVaHk5G6ANzGAI" />
+      <env name="ACCESSSECRET" value="w1pt4KaLKFbV8xp17oE1FS2XdREScgG7fvaSeRUhlqtpZ" />
+    </envs>
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
