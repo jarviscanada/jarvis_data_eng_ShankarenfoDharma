@@ -2,27 +2,23 @@ package ca.jrvs.apps.trading.dao;
 
 import ca.jrvs.apps.trading.model.MarketDataConfig;
 import ca.jrvs.apps.trading.model.domain.IexQuote;
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.conn.HttpClientConnectionManager;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.util.EntityUtils;
+import org.json.JSONException;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.data.repository.CrudRepository;
-import org.springframework.http.HttpMethod;
 import org.springframework.stereotype.Repository;
 
-import javax.print.URIException;
 import java.io.IOException;
-import java.net.URI;
-import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -105,12 +101,17 @@ public class MarketDataDao implements CrudRepository<IexQuote, String> {
             throw new IllegalArgumentException("Invalid ticker");
         }
         ObjectMapper mapper = new ObjectMapper();
-        try {
-            List<IexQuote> resultQuotes = mapper.readValue(String.valueOf(IexQuotesJson), new TypeReference<List<IexQuote>>(){});
-            return resultQuotes;
-        } catch (IOException e) {
-            throw new DataRetrievalFailureException("Parsing JSON values error");
-        }
+        List<IexQuote> resultQuotes = new ArrayList<>();
+        tickers.forEach( ticker -> {
+            try {
+                JSONObject quote = IexQuotesJson.getJSONObject(ticker).getJSONObject("quote");
+                IexQuote tickerData = mapper.readValue(quote.toString(), IexQuote.class);
+                resultQuotes.add(tickerData);
+            } catch (IOException | JSONException e) {
+                throw new IllegalArgumentException("Invalid tickers");
+            }
+        });
+        return resultQuotes;
 
     }
 

@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: ca.jrvs.apps.trading.dao.MarketDaoIntTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.243 s <<< FAILURE! - in ca.jrvs.apps.trading.dao.MarketDaoIntTest
-findIEXQuoteByTickers(ca.jrvs.apps.trading.dao.MarketDaoIntTest)  Time elapsed: 1.094 s  <<< ERROR!
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.249 s <<< FAILURE! - in ca.jrvs.apps.trading.dao.MarketDaoIntTest
+findIEXQuoteByTickers(ca.jrvs.apps.trading.dao.MarketDaoIntTest)  Time elapsed: 1.134 s  <<< ERROR!
 org.json.JSONException: A JSONObject text must begin with '{' at 1 [character 2 line 1]
 	at ca.jrvs.apps.trading.dao.MarketDaoIntTest.findIEXQuoteByTickers(MarketDaoIntTest.java:32)
 
