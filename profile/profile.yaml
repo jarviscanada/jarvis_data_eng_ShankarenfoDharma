@@ -42,7 +42,7 @@ jarvis_projects:
   - name: "Core Java Apps"
     git_url: "/core_java"
     description:
-#      - "Twitter App: Curabitur laoreet tristique leo, eget suscipit nisi. Sed in sodales ex. Maecenas vitae tincidunt dui, et eleifend quam."
+      - "Twitter App: Built a java CLI App utilizing Twitter 1.1 API to allow creation, retrieval and deletion of tweets. Utilizing Springboot as a base, the application runs on three-layer architecture of DAO, Service and Controller modules to access and communicate with twitter's API. Project can be deployed via dockerfile and also prepared in github."
       - "JDBC App: Created a java application that demonstrates usage of JDBC, including the use of JDBC driver, connections, DAOs and DTOs. DAO operations include queries for SQL with grouping, conditionals and multiple joins."
       - "Grep App: Deployed a java application emulating 'grep' functionality of bash. Application uses buffered reader/writer and stream API to process files. Application differs from bash grep as it accepts a folder url as source, which will access all files located under that folder for matching, and forces an output file for result of operation. Application can be accessed in target/grep-1.0-SNAPSHOT.jar through javac."
 #  - name: "Springboot App"
