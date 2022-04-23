@@ -1,11 +1,14 @@
 package ca.jrvs.apps.trading;
 
+import ca.jrvs.apps.trading.dao.MarketDataDao;
+import ca.jrvs.apps.trading.model.MarketDataConfig;
 import ca.jrvs.apps.trading.model.domain.IexQuote;
 import ca.jrvs.apps.trading.service.QuoteService;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,20 +22,30 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 
 import java.util.Locale;
 
-@SpringBootApplication(exclude = {JdbcTemplateAutoConfiguration.class, DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = "ca.jrvs.apps.trading", exclude = {JdbcTemplateAutoConfiguration.class, DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class Application implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(Application.class);
     private static final String GENERIC_USAGE_LINE="quote [id]";
+    private QuoteService quoteService;
 
     //@Value("${app.init.dailylist}")
     //private String[] initDailyList;
 
     @Autowired
-    QuoteService quoteService;
+    public Application(QuoteService quoteService){this.quoteService = quoteService;}
 
     public static void main(String[] args) throws Exception {
-        SpringApplication app = new SpringApplication(Application.class);
+        MarketDataConfig marketDataConfig = new MarketDataConfig();
+        marketDataConfig.setHost("https://cloud.iexapis.com/v1");
+        marketDataConfig.setToken(System.getenv("IEX_TOKEN"));
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
+        cm.setMaxTotal(50);
+        cm.setDefaultMaxPerRoute(50);
+        MarketDataDao quoteDao = new MarketDataDao(cm,marketDataConfig);
+        QuoteService quoteService = new QuoteService(quoteDao);
+        Application app = new Application(quoteService);
+//        SpringApplication app = new SpringApplication(Application.class);
         app.run(args);
     }
 
@@ -43,7 +56,10 @@ public class Application implements CommandLineRunner {
         }
         switch (args[0].toLowerCase(Locale.ROOT)) {
             case "quote":
-                displayQuote(quoteService.findIexQuoteByTicker(String.valueOf(args)));
+                if(!args[1].contains(","))
+                    displayQuote(quoteService.findIexQuoteByTicker(args[1]));
+                else
+                    quoteService.findIexQuotesByTickers(args[1]).forEach(quote -> displayQuote(quote));
                 break;
             default:
                 throw new IllegalArgumentException(GENERIC_USAGE_LINE);

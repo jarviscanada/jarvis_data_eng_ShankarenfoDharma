@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Arrays;
+import java.util.List;
 
 @Transactional
 @Service
@@ -25,5 +27,9 @@ public class QuoteService {
 
     public IexQuote findIexQuoteByTicker(String ticker){
         return marketDataDao.findById(ticker).orElseThrow(() -> new IllegalArgumentException(ticker+" is invalid"));
+    }
+
+    public List<IexQuote> findIexQuotesByTickers(String tickers){
+        return (List<IexQuote>) marketDataDao.findAllById(Arrays.asList(tickers.split(",")));
     }
 }

@@ -1,4 +1,8 @@
+ca/jrvs/apps/trading/Application.class
+ca/jrvs/apps/trading/controller/ResponseExceptionUtil.class
+ca/jrvs/apps/trading/controller/QuoteController.class
+ca/jrvs/apps/trading/model/domain/IexQuote.class
+ca/jrvs/apps/trading/SwaggerConfig.class
+ca/jrvs/apps/trading/service/QuoteService.class
 ca/jrvs/apps/trading/model/MarketDataConfig.class
 ca/jrvs/apps/trading/dao/MarketDataDao.class
-ca/jrvs/apps/trading/HelloWorld.class
-ca/jrvs/apps/trading/model/domain/IexQuote.class
