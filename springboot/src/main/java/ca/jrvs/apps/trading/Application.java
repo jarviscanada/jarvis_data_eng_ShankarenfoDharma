@@ -22,7 +22,7 @@ import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfigurat
 
 import java.util.Locale;
 
-@SpringBootApplication(scanBasePackages = "ca.jrvs.apps.trading", exclude = {JdbcTemplateAutoConfiguration.class, DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
+@SpringBootApplication(exclude = {JdbcTemplateAutoConfiguration.class, DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class Application implements CommandLineRunner {
 
     private Logger logger = LoggerFactory.getLogger(Application.class);
@@ -36,16 +36,7 @@ public class Application implements CommandLineRunner {
     public Application(QuoteService quoteService){this.quoteService = quoteService;}
 
     public static void main(String[] args) throws Exception {
-        MarketDataConfig marketDataConfig = new MarketDataConfig();
-        marketDataConfig.setHost("https://cloud.iexapis.com/v1");
-        marketDataConfig.setToken(System.getenv("IEX_TOKEN"));
-        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager();
-        cm.setMaxTotal(50);
-        cm.setDefaultMaxPerRoute(50);
-        MarketDataDao quoteDao = new MarketDataDao(cm,marketDataConfig);
-        QuoteService quoteService = new QuoteService(quoteDao);
-        Application app = new Application(quoteService);
-//        SpringApplication app = new SpringApplication(Application.class);
+        SpringApplication app = new SpringApplication(Application.class);
         app.run(args);
     }
 
