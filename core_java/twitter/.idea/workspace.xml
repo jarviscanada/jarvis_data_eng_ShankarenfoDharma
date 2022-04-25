@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="8" />
+    <option name="CUSTOM_SCOPE_NAME" value="Current File" />
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="73e8f29e-eef2-4e92-acec-08508615261c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/TwitterHttpHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/dao/CrdDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/dao/TwitterDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/helper/HttpHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/model/Coordinate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/model/Entity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/model/Hashtag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/model/Tweet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/model/UserMention.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/service/Service.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/twitter/TwitterHttpHelperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/TwitterHttpHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/controller/Controller.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/dao/CrdDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/dao/helper/HttpHelper.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/example/dto/Company.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/example/dto/Dividend.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/example/dto/Financial.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/example/dto/JSONParsingJackson.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/model/Coordinates.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/model/Entities.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/model/Hashtag.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/model/Tweet.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/model/UserMention.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/service/Service.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/ca/jrvs/apps/twitter/TwitterHttpHelperTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/TwitterAPITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/TwitterAPITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/example/dto/JSONParsingJackson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter/example/dto/JSONParsingJackson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/TwitterAPITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/twitter/TwitterAPITest.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectId" id="274XziLQd0doxWdkJC3Y5rhUneV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/twitter" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+  </component>
+  <component name="RunManager" selected="JUnit.TwitterHttpHelperTest.twitterHTTPHelperTest">
+    <configuration name="JSONParsingTest" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.twitter.example.dto.JSONParsingJackson" />
+      <module name="twitter" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwitterAPITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="CONSUMERKEY" value="ZxNkrMv6NaEH9OQDEZnQVkxbh" />
+        <env name="CONSUMERSECRET" value="pYyO1e7NJLdajKqdgwZSQEiotYVZpjkf2hwFO700wGaC2DefVE" />
+        <env name="ACCESSKEY" value="1498715648758714372-niob4NBQdBmfx8FLwV6CwMoLDkRjCi" />
+        <env name="ACCESSSECRET" value="zpSjTwlKI59onKHia5RleHiIzerJkEjO5r6awIedYiEgv" />
+      </envs>
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.twitter.TwitterAPITest" />
+      <module name="twitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.jrvs.apps.twitter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TwitterHttpHelperTest.twitterHTTPHelperTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+      <module name="twitter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ca.jrvs.apps.twitter.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ca.jrvs.apps.twitter" />
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.twitter.TwitterHttpHelperTest" />
+      <option name="METHOD_NAME" value="twitterHTTPHelperTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <envs>
+        <env name="CONSUMERKEY" value="ZxNkrMv6NaEH9OQDEZnQVkxbh" />
+        <env name="CONSUMERSECRET" value="pYyO1e7NJLdajKqdgwZSQEiotYVZpjkf2hwFO700wGaC2DefVE" />
+        <env name="ACCESSKEY" value="1498715648758714372-niob4NBQdBmfx8FLwV6CwMoLDkRjCi" />
+        <env name="ACCESSSECRET" value="zpSjTwlKI59onKHia5RleHiIzerJkEjO5r6awIedYiEgv" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.JSONParsingTest" />
+      <item itemvalue="Application.TwitterAPITest" />
+      <item itemvalue="JUnit.TwitterHttpHelperTest.twitterHTTPHelperTest" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TwitterAPITest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73e8f29e-eef2-4e92-acec-08508615261c" name="Changes" comment="" />
+      <created>1648580599110</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1648580599110</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
