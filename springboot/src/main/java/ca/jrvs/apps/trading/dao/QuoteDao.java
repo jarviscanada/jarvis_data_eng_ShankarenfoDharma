@@ -1,63 +1,89 @@
 package ca.jrvs.apps.trading.dao;
 
 import ca.jrvs.apps.trading.model.domain.Quote;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataRetrievalFailureException;
+import org.springframework.dao.IncorrectResultSizeDataAccessException;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.namedparam.BeanPropertySqlParameterSource;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.jdbc.core.simple.SimpleJdbcInsert;
+import org.springframework.stereotype.Repository;
 
+import javax.sql.DataSource;
 import java.util.Optional;
 
+@Repository
 public class QuoteDao implements CrudRepository<Quote,String> {
-    @Override
-    public <S extends Quote> S save(S s) {
-        return null;
+    private static final String TABLE_NAME = "quote";
+    private static final String ID_COLUMN_NAME = "ticker";
+
+    private static final Logger logger = LoggerFactory.getLogger(QuoteDao.class);
+    private JdbcTemplate jdbcTemplate;
+    private SimpleJdbcInsert jdbcInsert;
+
+    @Autowired
+    public QuoteDao(DataSource datasource){
+        jdbcTemplate = new JdbcTemplate(datasource);
+        jdbcInsert = new SimpleJdbcInsert(datasource).withTableName(TABLE_NAME);
     }
 
-    @Override
-    public <S extends Quote> Iterable<S> saveAll(Iterable<S> iterable) {
-        return null;
-    }
 
     @Override
-    public Optional<Quote> findById(String s) {
-        return Optional.empty();
+    public Quote save(Quote quote){
+        if(existsById(quote.getID())){
+            int updatedRowNo = uptadetOne(quote);
+            if(updatedRowNo != 1){
+                throw new DataRetrievalFailureException("Unable to update quote");
+            }
+        }
+        else {
+            addOne(quote);
+        }
+        return quote;
     }
 
-    @Override
-    public boolean existsById(String s) {
-        return false;
+    //insert one quote
+    private void addOne(Quote quote){
+        SqlParameterSource parameterSource = new BeanPropertySqlParameterSource(quote);
+        int row = jdbcInsert.execute(parameterSource);
+        if(row != 1)
+            throw new IncorrectResultSizeDataAccessException("Failed to insert",1,row);
     }
 
+    //update one quote
+    private int uptadetOne(Quote quote){
+        String update_SQL = "UPDATE quote SET last_price=?, bid_price=?, bid_size=?, ask_price=?, ask_size=? WHERE ticker=?";
+        return jdbcTemplate.update(update_SQL);
+    }
+
+    //returns all quotes
     @Override
     public Iterable<Quote> findAll() {
+        jdbcTemplate.execute();
         return null;
     }
 
     @Override
     public Iterable<Quote> findAllById(Iterable<String> iterable) {
-        return null;
+        throw new UnsupportedOperationException("Not implemented/required");
     }
 
     @Override
     public long count() {
-        return 0;
-    }
-
-    @Override
-    public void deleteById(String s) {
-
+        return jdbcTemplate.queryForObject("SELECT (*) FROM "+TABLE_NAME, Long.class);
     }
 
     @Override
     public void delete(Quote quote) {
-
+        throw new UnsupportedOperationException("Not implemented/required");
     }
 
     @Override
     public void deleteAll(Iterable<? extends Quote> iterable) {
-
-    }
-
-    @Override
-    public void deleteAll() {
-
+        throw new UnsupportedOperationException("Not implemented/required");
     }
 }
