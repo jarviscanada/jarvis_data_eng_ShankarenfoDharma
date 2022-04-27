@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829e7cc5-12e2-457b-9f94-e24b6ee82277" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteDaoIntTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/TestConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/controller/QuoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/controller/QuoteController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/QuoteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/QuoteDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Quote.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/model/domain/Quote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/model/domain/Quote.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/service/QuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/service/QuoteService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +69,27 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.fileTypes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="coverage" />
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/test/resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.RunallTests">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />
+        <env name="PSQL_HOST" value="localhost" />
+        <env name="PSQL_DB" value="jrvstrading" />
+        <env name="PSQL_USER" value="postgres" />
+        <env name="PSQL_PASSWORD" value="password" />
+        <env name="PSQL_PORT" value="5432" />
       </envs>
       <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.trading.Application" />
       <module name="trading" />
@@ -96,8 +123,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="QuoteDaoIntTest" type="JUnit" factoryName="JUnit">
+      <module name="trading" />
+      <option name="PACKAGE_NAME" value="ca.jrvs.apps.trading.dao" />
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.trading.dao.QuoteDaoIntTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="PSQL_URL" value="jdbc:postgresql://localhost:5432/jrvstrading" />
+        <env name="PSQL_USER" value="postgres" />
+        <env name="PSQL_PASSWORD" value="password" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="QuoteServiceIntTest" type="JUnit" factoryName="JUnit">
+      <module name="trading" />
+      <option name="PACKAGE_NAME" value="ca.jrvs.apps.trading.dao" />
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.trading.dao.QuoteServiceIntTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="PSQL_URL" value="jdbc:postgresql://localhost:5432/jrvstrading" />
+        <env name="PSQL_USER" value="postgres" />
+        <env name="PSQL_PASSWORD" value="password" />
+        <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RunallTests" type="JUnit" factoryName="JUnit">
+      <module name="trading" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <envs>
+        <env name="PSQL_URL" value="jdbc:postgresql://localhost:5432/jrvstrading" />
+        <env name="PSQL_USER" value="postgres" />
+        <env name="PSQL_PASSWORD" value="password" />
+        <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.RunallTests" />
+      <item itemvalue="JUnit.QuoteDaoIntTest" />
+      <item itemvalue="JUnit.QuoteServiceIntTest" />
       <item itemvalue="JUnit.MarketDaoIntTest" />
     </list>
     <recent_temporary>
@@ -118,6 +195,15 @@
     <servers />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java</url>
+          <line>88</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="org.json.JSONObject" memberName="map" />

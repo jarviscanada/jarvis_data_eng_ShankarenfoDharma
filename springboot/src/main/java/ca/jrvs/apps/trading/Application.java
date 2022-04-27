@@ -64,7 +64,7 @@ public class Application implements CommandLineRunner {
             objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
             System.out.println(objectMapper.writeValueAsString(iexQuoteByTicker));
         } catch (JsonProcessingException e) {
-            throw new RuntimeException("Unable to convert tweet object into string.",e);
+            throw new RuntimeException("Unable to convert Quote object into string.",e);
         }
     }
 }

@@ -1,5 +1,7 @@
 package ca.jrvs.apps.trading.model.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Quote implements Entity<String> {
     private String ticker;
     private Double lastPrice;
@@ -58,4 +60,6 @@ public class Quote implements Entity<String> {
     public void setID(String s) {
         this.ticker = s;
     }
+
+    public String getTicker(){return ticker;}
 }
