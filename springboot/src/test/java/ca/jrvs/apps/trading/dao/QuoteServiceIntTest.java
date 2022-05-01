@@ -41,7 +41,7 @@ public class QuoteServiceIntTest {
 
     @Test
     public void saveQuotesAndUpdate(){
-        quoteService.saveQuote("BAC");
+        //quoteService.saveQuote("MSFT");
         quoteService.saveQuotes(Arrays.asList("AAPL","FB"));
         quoteService.updateMarketData();
         List<Quote> quotes = quoteService.findAllQuotes();
@@ -56,4 +56,8 @@ public class QuoteServiceIntTest {
         }
     }
 
+    @After
+    public void cleanUp(){
+        quoteDao.deleteAll();
+    }
 }

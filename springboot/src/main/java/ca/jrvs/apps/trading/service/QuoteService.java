@@ -61,11 +61,26 @@ public class QuoteService {
     protected static Quote convertIexQuoteToQuote(IexQuote iexQuote){
         Quote resultQuote = new Quote();
         resultQuote.setID(iexQuote.getSymbol());
-        resultQuote.setLastPrice(iexQuote.getLatestPrice());
-        resultQuote.setBidPrice(iexQuote.getIexBidPrice());
-        resultQuote.setBidSize(iexQuote.getIexBidSize());
-        resultQuote.setAskPrice(iexQuote.getIexAskPrice());
-        resultQuote.setAskSize(iexQuote.getIexAskSize());
+        if(iexQuote.getLatestPrice() == null)
+        {resultQuote.setLastPrice(0d);}
+        else
+        {resultQuote.setLastPrice(iexQuote.getLatestPrice());}
+        if(iexQuote.getIexBidPrice() == null)
+        {resultQuote.setBidPrice(0d);}
+        else
+        {resultQuote.setBidPrice(iexQuote.getIexBidPrice());}
+        if(iexQuote.getIexBidSize() == null)
+        {resultQuote.setBidSize(0);}
+        else
+        {resultQuote.setBidSize(iexQuote.getIexBidSize());}
+        if(iexQuote.getIexAskPrice() == null)
+        {resultQuote.setAskPrice(0d);}
+        else
+        {resultQuote.setAskPrice(iexQuote.getIexAskPrice());}
+        if(iexQuote.getIexAskSize() == null)
+        {resultQuote.setAskSize(0);}
+        else
+        {resultQuote.setAskSize(iexQuote.getIexAskSize());}
         return resultQuote;
     }
 

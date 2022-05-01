@@ -5,20 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829e7cc5-12e2-457b-9f94-e24b6ee82277" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteDaoIntTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/TestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/schema.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/controller/TraderAccountController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/AccountDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/JdbcCrudDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/PositionDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/Security_OrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/TraderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Account.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Position.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Security_Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Trader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/TraderAccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/AccountDaoIntTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/Security_OrderDaoTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/TraderAccountServiceIntTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/TraderDaoIntTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/controller/QuoteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/controller/QuoteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/QuoteDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/QuoteDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Quote.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/AppConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/Application.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/model/domain/Quote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/model/domain/Quote.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/service/QuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/service/QuoteService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +78,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -81,7 +91,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RunallTests">
+  <component name="RunManager" selected="JUnit.TraderAccountServiceIntTest">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />
@@ -170,8 +180,42 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TraderAccountServiceIntTest" type="JUnit" factoryName="JUnit">
+      <module name="trading" />
+      <option name="PACKAGE_NAME" value="ca.jrvs.apps.trading.dao" />
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.trading.dao.TraderAccountServiceIntTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="PSQL_URL" value="jdbc:postgresql://localhost:5432/jrvstrading" />
+        <env name="PSQL_USER" value="postgres" />
+        <env name="PSQL_PASSWORD" value="password" />
+        <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TraderDAOtest" type="JUnit" factoryName="JUnit">
+      <module name="trading" />
+      <option name="PACKAGE_NAME" value="ca.jrvs.apps.trading.dao" />
+      <option name="MAIN_CLASS_NAME" value="ca.jrvs.apps.trading.dao.TraderDaoIntTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <envs>
+        <env name="PSQL_URL" value="jdbc:postgresql://localhost:5432/jrvstrading" />
+        <env name="PSQL_USER" value="postgres" />
+        <env name="PSQL_PASSWORD" value="password" />
+        <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />
+      </envs>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Application" />
+      <item itemvalue="JUnit.TraderAccountServiceIntTest" />
+      <item itemvalue="JUnit.TraderDAOtest" />
       <item itemvalue="JUnit.RunallTests" />
       <item itemvalue="JUnit.QuoteDaoIntTest" />
       <item itemvalue="JUnit.QuoteServiceIntTest" />
@@ -198,16 +242,15 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java</url>
-          <line>88</line>
-          <option name="timeStamp" value="1" />
+          <url>file://$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/Security_OrderDao.java</url>
+          <line>69</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <pin-to-top-manager>
-      <pinned-members>
-        <PinnedItemInfo parentTag="org.json.JSONObject" memberName="map" />
-      </pinned-members>
-    </pin-to-top-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/springboot$TraderDAOtest.ic" NAME="TraderDAOtest Coverage Results" MODIFIED="1651264995716" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/springboot$RunallTests.ic" NAME="RunallTests Coverage Results" MODIFIED="1651092323852" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

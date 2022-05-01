@@ -5,6 +5,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class Quote implements Entity<String> {
     private String ticker;
     private Double lastPrice;
+    private Double bidPrice;
+    private Integer bidSize;
+    private Double askPrice;
+    private Integer askSize;
 
     public Double getLastPrice() {
         return lastPrice;
@@ -45,11 +49,6 @@ public class Quote implements Entity<String> {
     public void setAskSize(Integer askSize) {
         this.askSize = askSize;
     }
-
-    private Double bidPrice;
-    private Integer bidSize;
-    private Double askPrice;
-    private Integer askSize;
 
     @Override
     public String getID() {
