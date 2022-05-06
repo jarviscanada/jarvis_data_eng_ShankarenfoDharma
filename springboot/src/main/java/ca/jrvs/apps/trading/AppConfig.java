@@ -36,7 +36,7 @@ public class AppConfig {
     public MarketDataConfig marketDataConfig(){
         MarketDataConfig marketDataConfig = new MarketDataConfig();
         marketDataConfig.setHost("https://cloud.iexapis.com/v1");
-        marketDataConfig.setToken(System.getenv("IEX_TOKEN"));
+        marketDataConfig.setToken(System.getenv("IEX_PUB_TOKEN"));
         return marketDataConfig;
     }
 

@@ -36,6 +36,14 @@ public class QuoteServiceIntTest {
     @Test
     public void findIexQuoteByTicker(){
         IexQuote result = quoteService.findIexQuoteByTicker("AAPL");
+        try{
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
+            objectMapper.enable(SerializationFeature.INDENT_OUTPUT);
+            System.out.println(objectMapper.writeValueAsString(result));
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException("Unable to convert quote object into string.",e);
+        }
         assertEquals("AAPL",result.getSymbol());
     }
 
