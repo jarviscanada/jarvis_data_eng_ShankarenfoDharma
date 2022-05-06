@@ -5,29 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="829e7cc5-12e2-457b-9f94-e24b6ee82277" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/controller/TraderAccountController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/AccountDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/JdbcCrudDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/PositionDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/Security_OrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/dao/TraderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Position.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Security_Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Trader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/TraderAccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/AccountDaoIntTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/Security_OrderDaoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/TraderAccountServiceIntTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/TraderDaoIntTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Quote.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/model/domain/Quote.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/service/QuoteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/model/domain/Quote.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/model/domain/Quote.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/service/QuoteService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/service/QuoteService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ca/jrvs/apps/trading/dao/QuoteServiceIntTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/jrvs/apps/trading/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/AppConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/AppConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ca/jrvs/apps/trading/Application.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,7 +73,7 @@
       <recent name="$PROJECT_DIR$/src/test/resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TraderAccountServiceIntTest">
+  <component name="RunManager" selected="Application.Application">
     <configuration name="Application" type="Application" factoryName="Application" nameIsGenerated="true">
       <envs>
         <env name="IEX_TOKEN" value="pk_416aaedc230b420396ae56c49b757c09" />

@@ -19,9 +19,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration;
+import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
-import java.util.Locale;
-
+@EnableSwagger2
 @SpringBootApplication(exclude = {JdbcTemplateAutoConfiguration.class, DataSourceAutoConfiguration.class, HibernateJpaAutoConfiguration.class})
 public class Application implements CommandLineRunner {
 
@@ -36,25 +36,27 @@ public class Application implements CommandLineRunner {
     public Application(QuoteService quoteService){this.quoteService = quoteService;}
 
     public static void main(String[] args) throws Exception {
-        SpringApplication app = new SpringApplication(Application.class);
-        app.run(args);
+        SpringApplication.run(Application.class,args);
+
+//        SpringApplication app = new SpringApplication(Application.class);
+//        app.run(args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        if(args.length == 0){
-            throw new IllegalArgumentException(GENERIC_USAGE_LINE);
-        }
-        switch (args[0].toLowerCase(Locale.ROOT)) {
-            case "quote":
-                if(!args[1].contains(","))
-                    displayQuote(quoteService.findIexQuoteByTicker(args[1]));
-                else
-                    quoteService.findIexQuotesByTickers(args[1]).forEach(quote -> displayQuote(quote));
-                break;
-            default:
-                throw new IllegalArgumentException(GENERIC_USAGE_LINE);
-        }
+//        if(args.length == 0){
+//            throw new IllegalArgumentException(GENERIC_USAGE_LINE);
+//        }
+//        switch (args[0].toLowerCase(Locale.ROOT)) {
+//            case "quote":
+//                if(!args[1].contains(","))
+//                    displayQuote(quoteService.findIexQuoteByTicker(args[1]));
+//                else
+//                    quoteService.findIexQuotesByTickers(args[1]).forEach(quote -> displayQuote(quote));
+//                break;
+//            default:
+//                throw new IllegalArgumentException(GENERIC_USAGE_LINE);
+//        }
     }
 
     private void displayQuote(IexQuote iexQuoteByTicker){

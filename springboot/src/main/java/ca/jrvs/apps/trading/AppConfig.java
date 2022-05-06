@@ -1,16 +1,11 @@
 package ca.jrvs.apps.trading;
 
-import ca.jrvs.apps.trading.dao.MarketDataDao;
 import ca.jrvs.apps.trading.model.MarketDataConfig;
-import ca.jrvs.apps.trading.service.QuoteService;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.apache.http.conn.HttpClientConnectionManager;
-import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -55,18 +50,19 @@ public class AppConfig {
 
     @Bean
     public DataSource dataSource() {
-        String jdbcUrl =
-                "jdbc:postgresql://" +
-                        System.getenv("PSQL_HOST") + ":" +
-                        System.getenv("PSQL_PORT") +
-                        "/" +
-                        System.getenv("PSQL_DB");
+//        String jdbcUrl =
+//                "jdbc:postgresql://" +
+//                        System.getenv("PSQL_HOST") + ":" +
+//                        System.getenv("PSQL_PORT") +
+//                        "/" +
+//                        System.getenv("PSQL_DB");
         String user = System.getenv("PSQL_USER");
         String password = System.getenv("PSQL_PASSWORD");
+        String psql_url = System.getenv("PSQL_URL");
 
         //Never log your credentials/secrets. Use IDE debugger instead
         BasicDataSource basicDataSource = new BasicDataSource();
-        basicDataSource.setUrl(jdbcUrl);
+        basicDataSource.setUrl(psql_url);
         basicDataSource.setUsername(user);
         basicDataSource.setPassword(password);
         return basicDataSource;
