@@ -5,18 +5,43 @@ Table of contents
 * [Rest API Usage](#Rest_API_Usage)
 * [Test](#Test)
 * [Deployment](#Deployment)
-* Improvements](#Improvements)
+* [Improvements](#Improvements)
 
 # Introduction
-This springboot application is the proof of concept for a new version of Jarvis Trading Application, which has the ability to source the stock market data from IEXCloud and update the application's database info. Using an external, independent postgres database to maintain a stateless property, this application allows the lookup/search for simplified/relevant stock market tickers, the creation (and deletion) of trader accounts, use of associated funds account, and the trading of stocks using those accounts. This application is built with a three-tier architecture, and uses Springboot as its base, alongside with running the Tomcat webservlet. Some of the application's API endpoints may be accessed using SwaggerUI 
+This springboot application is the proof of concept for a new version of Jarvis Trading Application, which has the ability to source the stock market data from IEXCloud and update the application's database info. Using an external, independent postgres database to maintain a stateless property, this application allows the lookup/search for simplified/relevant stock market tickers, the creation (and deletion) of trader accounts, use of associated funds account, and the trading of stocks using those accounts. This application is built with a three-tier architecture, and uses Springboot as its base, alongside with running the Tomcat webservlet. Some of the application's API endpoints may be accessed using SwaggerUI.
 
 # Quick Start
 - Prequiresites: Docker, CentOS 7
-- Docker scripts with description
-	- build images
-  - create a docker network
-  - start containers
-- Try trading-app with SwaggerUI (screenshot)
+- create a docker network: sudo docker network create trading-net
+- Docker scripts:
+	- /psql/Dockerfile: initiates psql database, initiate tables using .sql script
+		- build image:
+			cd ./springboot/psql<br>
+			docker build -t trading-psql .<br>
+			docker image ls -f reference=trading-psql<br>
+	- /Dockerfile: compiles and builds app jar, create image
+		- build image:
+			cd ./springboot/<br>
+			docker build -t trading-app . <br>
+			docker image ls -f reference=trading-psql <br>
+  - start containers:
+  	docker run --name trading-psql-dev \<br>
+	-e POSTGRES_PASSWORD=password \<br>
+	-e POSTGRES_DB=jrvstrading \<br>
+	-e POSTGRES_USER=postgres \<br>
+	--network trading-net \<br>
+	-d -p 5432:5432 trading-psql<br>
+
+	IEX_PUB_TOKEN="your_token"<br>
+	docker run --name trading-app-dev \<br>
+	-e "PSQL_URL=jdbc:postgresql://trading-psql-dev:5432/jrvstrading" \<br>
+	-e "PSQL_USER=postgres" \<br>
+	-e "PSQL_PASSWORD=password" \<br>
+	-e "IEX_PUB_TOKEN=${IEX_PUB_TOKEN}" \<br>
+	--network trading-net \<br>
+	-p 8080:8080 -t trading-app<br>
+- Try trading-app with SwaggerUI: localhost/8080
+![Swagger UI Usage](src/SwaggerPreview.JPG)
 
 # Implemenation
 ## Architecture
@@ -58,4 +83,5 @@ e.g. https://www.notion.so/jarviscanada/Dockerize-Trading-App-fc8c8f4167ad460890
 
 # Improvements
 - Inclusion of all components
-- Simulate traders 
+- Remove redundant/stub functions/endpoints
+- Implement an overview system/class for greater oversight/admin view
