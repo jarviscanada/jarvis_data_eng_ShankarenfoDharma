@@ -46,16 +46,16 @@ This springboot application is the proof of concept for a new version of Jarvis 
 # Implemenation
 ## Architecture
 - Draw a component diagram that contains controllers, services, DAOs, SQL, IEX Cloud, WebServlet/Tomcat, HTTP client, and SpringBoot. (you must create your own diagram)
-- briefly explain the following components and services (3-5 sentences for each)
-  - Controller layer (e.g. handles user requests....)
-  - Service layer
-  - DAO layer
-  - SpringBoot: webservlet/TomCat and IoC
-  - PSQL and IEX
+- Components Overview
+  - Controller layer: Handles communication/relaying information towards interfaces/user endpoints, provides managed selective access to functionalities.
+  - Service layer: Handles the business logic, processes and implementation of functions.
+  - DAO layer: Storage and entities, representing real entities in programmatically understandable manner.
+  - SpringBoot: Runs and manages webservlet/TomCat and IoC of application.
+  - PSQL and IEX: PSQL serves as independent external storage, permitting the application proper to become stateless. IEX serves as an external data source, used to retrieve up-to-date business relevant data.
 
 ## REST API Usage
 ### Swagger
-Swagger automatically describe the structure of the API so that machines can read them. In this case, swagger is useful for testing the API's endpoints and to simulate API usage.
+Swagger automatically describes the structure of the API so that machines can read them. In this case, swagger is useful for testing the API's endpoints and to simulate API usage.
 ### Quote Controller
 - High-level description for this controller. Where is market data coming from (IEX) and how did you cache the quote data (PSQL). Briefly talk about data from within your app
 - briefly explain each endpoint
@@ -74,12 +74,12 @@ Swagger automatically describe the structure of the API so that machines can rea
 - briefly explain each endpoint
 
 # Test 
-How did you test your application? Did you use any testing libraries? What's the code coverage?
+The application is tested with JUnit and integration tests on code level, while SwaggerUI is used to verify endpoints and program outputs. Code coverage class is 68% while methods coverage is 79%. The relatively low coverage is expected since the usage of interfaces and abstract classes together with the proof-of-concept nature of the application results in several unused or stub methods and redundant/inappropriate functions.
 
 # Deployment
-- docker diagram including images, containers, network, and docker hub
-e.g. https://www.notion.so/jarviscanada/Dockerize-Trading-App-fc8c8f4167ad46089099fd0d31e3855d#6f8912f9438e4e61b91fe57f8ef896e0
-- describe each image in details (e.g. how psql initialize tables)
+The application is saved on github and dockerizable with dockerfiles.
+- PSQL Dockerfile initiates psql, then executes the .sql file in the sql_ddl folder to initiate the necessary tables. 
+- Base Dockerfile compiles and creates a .jar of the application, which is next wrapped into an image.
 
 # Improvements
 - Inclusion of all components
